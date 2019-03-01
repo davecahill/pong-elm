@@ -236,7 +236,7 @@ subscriptions model =
 view : Model -> Html Msg
 view model =
   div []
-    [ h1 [] [ Html.text "Press spacebar to start" ], gameBoard model
+    [ h3 [] [ Html.text "Press spacebar to start, w/s to control the left paddle, and k/m to control the right paddle." ], gameBoard model
     ]
 
 whiteColor : String
