@@ -1,4 +1,5 @@
 import Html exposing (..)
+import Html.Attributes exposing (style)
 import Keyboard exposing (..)
 import Char exposing (..)
 import Svg exposing (..)
@@ -235,8 +236,8 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
-  div []
-    [ h3 [] [ Html.text "Press spacebar to start, w/s to control the left paddle, and k/m to control the right paddle." ], gameBoard model
+  div [ Html.Attributes.style [("text-align","center")] ]
+    [ h3 [] [ Html.text "Press spacebar to start, w/s to control the left paddle, and k/m to control the right paddle." ], br [] [], gameBoard model, br [] []
     ]
 
 whiteColor : String
